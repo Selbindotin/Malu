@@ -11,35 +11,33 @@
       overflow-x: hidden;
       font-family: sans-serif;
       scroll-behavior: smooth;
+      background: #000;
     }
     .section {
-      position: relative;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      transition: background 1s ease-in-out;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.3);
+    .section img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <div class="section" style="background-image: url('https://cdn.pixabay.com/photo/2021/02/13/14/51/building-6011756_1280.jpg');">
-    <div class="overlay"></div>
+  <div class="section">
+    <img src="https://cdn.pixabay.com/photo/2021/02/13/14/51/building-6011756_1280.jpg" alt="Photo 1">
   </div>
 
-  <div class="section" style="background-image: url('https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg');">
-    <div class="overlay"></div>
+  <div class="section">
+    <img src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg" alt="Photo 2">
   </div>
 
-  <div class="section" style="background-image: url('https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_3');">
-    <div class="overlay"></div>
+  <div class="section">
+    <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_3" alt="Photo 3">
   </div>
 
 </body>
