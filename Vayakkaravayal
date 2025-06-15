@@ -30,11 +30,11 @@
 </head>
 <body>
 
-  <div class="section" style="background-image: url('https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_1');">
+  <div class="section" style="background-image: url('https://cdn.pixabay.com/photo/2021/02/13/14/51/building-6011756_1280.jpg');">
     <div class="overlay"></div>
   </div>
 
-  <div class="section" style="background-image: url('https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_2');">
+  <div class="section" style="background-image: url('https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg');">
     <div class="overlay"></div>
   </div>
 
