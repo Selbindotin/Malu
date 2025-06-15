@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parallax Photo Album</title>
+  <title>Parallax Photo Album with Captions</title>
   <style>
     html, body {
       margin: 0;
@@ -12,6 +12,7 @@
       font-family: sans-serif;
       scroll-behavior: smooth;
       background: #000;
+      color: #fff;
     }
 
     .section {
@@ -26,15 +27,32 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 120%; /* a bit larger for smoother parallax */
+      height: 120%; /* extra height for parallax effect */
       object-fit: cover;
       transform: translateY(0);
       will-change: transform;
+      z-index: 1;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.5em;
     }
 
     .spacer {
-      height: 100vh;
-      background: #000;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      text-align: center;
+      padding: 0 20px;
     }
   </style>
 </head>
@@ -42,19 +60,24 @@
 
   <div class="section">
     <img class="parallax-img" src="https://cdn.pixabay.com/photo/2022/11/27/01/47/boat-7618814_1280.jpg" alt="Photo 1">
+    <div class="overlay-text">Your Overlay Caption 1</div>
   </div>
 
-  <div class="spacer"></div>
+  <div class="spacer">This is a beautiful memory caption 1.</div>
 
   <div class="section">
-    <img class="parallax-img" src="https://cdn.pixabay.com/photo/2021/02/13/14/51/building-6011756_1280.jpg" alt="Photo 2">
+    <img class="parallax-img" src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg" alt="Photo 2">
+    <div class="overlay-text">Your Overlay Caption 2</div>
   </div>
 
-  <div class="spacer"></div>
+  <div class="spacer">A special moment caption 2.</div>
 
   <div class="section">
-    <img class="parallax-img" src="https://cdn.pixabay.com/photo/2025/05/30/17/15/mountain-9631829_1280.jpg" alt="Photo 3">
+    <img class="parallax-img" src="https://cdn.pixabay.com/photo/2021/02/13/14/51/building-6011756_1280.jpg" alt="Photo 3">
+    <div class="overlay-text">Your Overlay Caption 3</div>
   </div>
+
+  <div class="spacer">Cherished memory caption 3.</div>
 
   <script>
     window.addEventListener('scroll', function() {
